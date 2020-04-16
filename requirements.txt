@@ -1,3 +1,4 @@
 # This allows Netlify to build the docs, and is not for fastrf development
+# https://docs.netlify.com/configure-builds/common-configurations/#mkdocs
 mkdocs
 mkdocs-material
