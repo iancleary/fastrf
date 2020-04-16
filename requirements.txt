@@ -1,0 +1,3 @@
+# This allows Netlify to build the docs, and is not for fastrf development
+mkdocs>=0.9.0
+mkdocs-material
