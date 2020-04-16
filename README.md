@@ -1,16 +1,33 @@
 # fastrf
 
-[![Build Status](https://img.shields.io/travis/com/iancleary/fastrf/master.svg)](https://img.shields.io/travis/com/iancleary/fastrf)
-[![image](https://img.shields.io/pypi/v/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![Updates](https://pyup.io/repos/github/iancleary/fastrf/shield.svg)](https://pyup.io/repos/github/iancleary/fastrf/)
-[![image](https://img.shields.io/pypi/l/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![image](https://img.shields.io/pypi/pyversions/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![image](https://img.shields.io/github/contributors/iancleary/fastrf.svg)](https://github.com/iancleary/fastrf/graphs/contributors)
+<p align="center">
+    <em>FastRF application, create link budgets, track key system metrics, fast to model, ready for production</em>
+</p>
+
+<p align="center">
+<a href="https://travis-ci.com/iancleary/fastrf" target="_blank">
+    <img src="https://travis-ci.com/iancleary/fastrf.svg?branch=master" alt="Build Status">
+</a>
+
+<a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
+    <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
+</a>
+<a href="https://pypi.org/project/fastrf" target="_blank">
+    <img src="https://badge.fury.io/py/fastrf.svg" alt="Package version">
+</a>
+<a href="https://pypi.org/project/fastrf/" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/fastrf.svg" alt="Python Versions">
+</a>
+</p>
 
 ## The Basic Idea
 
-This is a template module collecting many utilities I have liked from other projects, to serve as a personal reference.
+Fastrf is a web server that makes it easy to create radio frequency (RF) gain line ups 📡, link budgets 🌎📡🛰️, and simulation models 🧪🧮 to caputre the performance of a RF system.
+
+This project will stand on the shoulders of some giants:
 - [https://github.com/tiangolo/fastapi/](https://github.com/tiangolo/fastapi/)
+- [https://github.com/samuelcolvin/pydantic/](https://github.com/samuelcolvin/pydantic/)
+- [https://github.com/scikit-rf/scikit-rf](https://github.com/scikit-rf/scikit-rf)
 
 ## Features
 
@@ -21,6 +38,30 @@ This is a template module collecting many utilities I have liked from other proj
 - mypy (static type checking)
 - pytest (including test coverage)
 - travis-ci for CI/CD
+
+## Documentation
+
+Documentation is hosted at[fastrf.iancleary.me](https://fastrf.iancleary.me/).
+
+> Thank you to Netlify for builds and hosts the documentation 🙂🚀🎉!
+
+### Netlify and Mkdocs
+
+The `requirements.txt` and `runtime.txt` enable Netlify to build the docs.
+
+> They are not for fastrf development. pyproject.toml specifies flit settings
+
+These are required to configure Netlify's deployment and pull request previews for mkdocs
+
+#### Requirements.txt
+
+<https://docs.netlify.com/configure-builds/common-configurations/#mkdocs>
+
+#### Runtime.txt
+
+Specifies python version for Netlify
+
+<https://docs.netlify.com/configure-builds/manage-dependencies/#python>
 
 ## Installing fastrf
 
@@ -33,10 +74,13 @@ pip install fastrf
 Or you can clone `fastrf` and get started locally
 
 ```bash
-
 # install all dependencies (including dev)
 flit install
 ```
+
+### Dependencies
+
+The `pyproject.toml` file is used by `flit` to install dependencies into a virtual environment.
 
 > Flit Command Line Interface documentation:
 > <https://flit.readthedocs.io/en/latest/cmdline.html>
@@ -50,22 +94,6 @@ import fastrf
 ```
 
 Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
-
-## Requirements.txt and runtime.txt
-
-This allows Netlify to build the docs, and is not for fastrf developmen.
-
-These are required to configure Netlify's deployment and pull request previews for mkdocs
-
-### Requirements.txt
-
-<https://docs.netlify.com/configure-builds/common-configurations/#mkdocs>
-
-#### Runtime.txt
-
-Specifies python version for Netlify
-
-< https://docs.netlify.com/configure-builds/manage-dependencies/#python>
 
 ## Deploying to PyPi
 
