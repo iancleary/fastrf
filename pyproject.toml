@@ -1,0 +1,40 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "fastrf"
+author = "Ian Cleary"
+author-email = "iancleary@pm.me"
+home-page = "https://github.com/iancleary/fastrf"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3 :: Only",
+]
+requires = [
+    "pydantic >=0.32.2,<=0.32.2"
+]
+description-file = "README.md"
+requires-python = ">=3.6"
+
+[tool.flit.metadata.urls]
+Documentation = "https://github.com/iancleary/fastrf"
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest >=4.0.0",
+    "pytest-cov",
+    "mypy",
+    "black",
+    "isort",
+    "autoflake"
+]
+doc = [
+    "mkdocs",
+    "mkdocs-material",
+    "markdown-include"
+]
