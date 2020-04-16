@@ -1,11 +1,26 @@
 # fastrf
 
-[![Build Status](https://img.shields.io/travis/com/iancleary/fastrf/master.svg)](https://img.shields.io/travis/com/iancleary/fastrf)
-[![image](https://img.shields.io/pypi/v/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![Updates](https://pyup.io/repos/github/iancleary/fastrf/shield.svg)](https://pyup.io/repos/github/iancleary/fastrf/)
-[![image](https://img.shields.io/pypi/l/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![image](https://img.shields.io/pypi/pyversions/fastrf.svg)](https://pypi.org/project/fastrf/)
-[![image](https://img.shields.io/github/contributors/iancleary/fastrf.svg)](https://github.com/iancleary/fastrf/graphs/contributors)
+<p align="center">
+    <em>FastRF application, create link budgets, track key system metrics, fast to model, ready for production</em>
+</p>
+
+<p align="center">
+<a href="https://travis-ci.com/iancleary/fastrf" target="_blank">
+    <img src="https://travis-ci.com/iancleary/fastrf.svg?branch=master" alt="Build Status">
+</a>
+<a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
+    <img src="https://codecov.io/gh/iancleary/fastrf/branch/master/graph/badge.svg" alt="Coverage">
+</a>
+<a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
+    <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
+</a>
+<a href="https://pypi.org/project/fastrf" target="_blank">
+    <img src="https://badge.fury.io/py/fastrf.svg" alt="Package version">
+</a>
+<a href="https://pypi.org/project/fastrf/" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/fastrf.svg" alt="Python Versions">
+</a>
+</p>
 
 ## The Basic Idea
 
