@@ -8,9 +8,7 @@
 <a href="https://travis-ci.com/iancleary/fastrf" target="_blank">
     <img src="https://travis-ci.com/iancleary/fastrf.svg?branch=master" alt="Build Status">
 </a>
-<a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
-    <img src="https://codecov.io/gh/iancleary/fastrf/branch/master/graph/badge.svg" alt="Coverage">
-</a>
+
 <a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
 </a>
