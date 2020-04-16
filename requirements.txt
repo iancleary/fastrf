@@ -1,4 +1,9 @@
 # This allows Netlify to build the docs, and is not for fastrf development
+#
+# Requirements.txt: 
 # https://docs.netlify.com/configure-builds/common-configurations/#mkdocs
+#
+# Runtime.txt specifies python version (and can't have comments)
+# https://docs.netlify.com/configure-builds/manage-dependencies/#python
 mkdocs
 mkdocs-material
