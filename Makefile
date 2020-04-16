@@ -32,13 +32,6 @@ docs-live: ## make live docs
 docs-live:
 	bash scripts/docs-live.sh
 
-deploy-docs: ## deploy the docs, if on master branch
-deploy-docs:
-	# https://www.mkdocs.org/user-guide/deploying-your-docs/
-
-	# moved script to bash file for easy of reading
-	bash scripts/deploy-docs.sh
-
 install: ## uninstall and install package with python
 install:
 	echo y | pip uninstall fastrf
@@ -52,3 +45,8 @@ install-editable:
 	python setup.py build
 	python setup.py develop
 	# python -m pip install -e .
+
+develop:  ## Setups a development environment using flit
+develop:
+	# https://flit.readthedocs.io/en/latest/cmdline.html
+	flit install

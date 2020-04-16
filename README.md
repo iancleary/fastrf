@@ -11,11 +11,10 @@
 
 This is a template module collecting many utilities I have liked from other projects, to serve as a personal reference.
 - [https://github.com/tiangolo/fastapi/](https://github.com/tiangolo/fastapi/)
-- [https://github.com/cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
 
 ## Features
 
-- pipenv (sane virtualenv)
+- flit (virtualenv and deployment to PyPi)
 - black (linting/formatter)
 - autoflake (removing unused packages)
 - isort (dependency organization)
@@ -35,18 +34,12 @@ Or you can clone `fastrf` and get started locally
 
 ```bash
 
-# ensure you have pipenv installed
-pip install --user pipenv
-
 # install all dependencies (including dev)
-pipenv install --dev
-
-# start a shell in pipenv
-pipenv shell
-
-# develop!
-
+flit install
 ```
+
+> Flit Command Line Interface documentation:
+> <https://flit.readthedocs.io/en/latest/cmdline.html>
 
 ## Example Usage
 
@@ -56,7 +49,23 @@ import fastrf
 # do stuff
 ```
 
-Only **Python 3.6+** is supported as required by the black, pydantic packages
+Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
+
+## Requirements.txt and runtime.txt
+
+This allows Netlify to build the docs, and is not for fastrf developmen.
+
+These are required to configure Netlify's deployment and pull request previews for mkdocs
+
+### Requirements.txt
+
+<https://docs.netlify.com/configure-builds/common-configurations/#mkdocs>
+
+#### Runtime.txt
+
+Specifies python version for Netlify
+
+< https://docs.netlify.com/configure-builds/manage-dependencies/#python>
 
 ## Deploying to PyPi
 
@@ -64,5 +73,4 @@ Using the flit package
 
 ```bash
 ./scripts/deploy.sh
-# TBD detail about flit setup
 ```
