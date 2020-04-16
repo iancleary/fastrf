@@ -16,7 +16,9 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
 ]
 requires = [
-    "pydantic >=0.32.2,<=0.32.2"
+    "pydantic >=0.32.2,<2.0.0",
+    "fastapi >=0.32.2,<2.0.0"
+
 ]
 description-file = "README.md"
 requires-python = ">=3.6"
