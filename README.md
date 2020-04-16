@@ -47,6 +47,24 @@ Documentation is hosted at[fastrf.iancleary.me](https://fastrf.iancleary.me/).
 
 > Thank you to Netlify for builds and hosts the documentation 🙂🚀🎉!
 
+### Netlify and Mkdocs
+
+The `requirements.txt` and `runtime.txt` enable Netlify to build the docs.
+
+> They are not for fastrf development. pyproject.toml specifies flit settings
+
+These are required to configure Netlify's deployment and pull request previews for mkdocs
+
+#### Requirements.txt
+
+<https://docs.netlify.com/configure-builds/common-configurations/#mkdocs>
+
+#### Runtime.txt
+
+Specifies python version for Netlify
+
+<https://docs.netlify.com/configure-builds/manage-dependencies/#python>
+
 ## Installing fastrf
 
 Install the latest release:
@@ -62,6 +80,10 @@ Or you can clone `fastrf` and get started locally
 flit install
 ```
 
+### Dependencies
+
+The `pyproject.toml` file is used by `flit` to install dependencies into a virtual environment.
+
 > Flit Command Line Interface documentation:
 > <https://flit.readthedocs.io/en/latest/cmdline.html>
 
@@ -74,22 +96,6 @@ import fastrf
 ```
 
 Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
-
-## Requirements.txt and runtime.txt
-
-This allows Netlify to build the docs, and is not for fastrf developmen.
-
-These are required to configure Netlify's deployment and pull request previews for mkdocs
-
-### Requirements.txt
-
-<https://docs.netlify.com/configure-builds/common-configurations/#mkdocs>
-
-#### Runtime.txt
-
-Specifies python version for Netlify
-
-<https://docs.netlify.com/configure-builds/manage-dependencies/#python>
 
 ## Deploying to PyPi
 
