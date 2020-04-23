@@ -46,7 +46,40 @@ install-editable:
 	python setup.py develop
 	# python -m pip install -e .
 
-develop:  ## Setups a development environment using flit
 develop:
+develop: ## ## Setups a Python3 (latest) development environment pipenv and flit
+	make develop-three-eight
+
+develop-three-eight:  ## Setups a Python3.8 development environment pipenv and flit
+develop-three-eight:
 	# https://flit.readthedocs.io/en/latest/cmdline.html
-	flit install
+	pipenv --python 3.8
+	pipenv run python3 -m pip install flit
+	pipenv run flit install
+	pipenv shell
+
+develop-three-seven:  ## Setups a python3.7 development environment pipenv and flit
+develop-three-seven:
+	# https://flit.readthedocs.io/en/latest/cmdline.html
+	pipenv --python 3.7
+	pipenv run python3 -m pip install flit
+	pipenv run flit install
+	pipenv shell
+
+develop-three-six:  ## Setups a python3.7 development environment pipenv and flit
+develop-three-six:
+	# https://flit.readthedocs.io/en/latest/cmdline.html
+	pipenv --python 3.6
+	pipenv run python3 -m pip install flit
+	pipenv run flit install
+	pipenv shell
+
+clean:
+clean: ## exists pipenv, cleans virtual environment
+	-pipenv --rm
+	rm -rf dist/
+	rm -rf .mypy_cache/
+	rm -rf .pytest_cache/
+	rm .coverage
+	rm Pipfile
+
