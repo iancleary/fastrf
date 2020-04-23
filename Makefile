@@ -47,7 +47,7 @@ install-editable:
 	# python -m pip install -e .
 
 develop:
-develop: ## ## Setups a Python3 (latest) development environment pipenv and flit
+develop: ## Setups a Python3 (latest) development environment pipenv and flit
 	make develop-three-eight
 
 develop-three-eight:  ## Setups a Python3.8 development environment pipenv and flit
@@ -82,4 +82,3 @@ clean: ## exists pipenv, cleans virtual environment
 	rm -rf .pytest_cache/
 	rm .coverage
 	rm Pipfile
-
