@@ -1,41 +1,27 @@
+[tool.poetry]
+name = "fastrf"
+version = "0.0.0"
+description = "Library to create, store, query, and update Radio Frequency Models, Specs, and Reports"
+authors = ["Ian Cleary <iancleary@pm.me}>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pydantic = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.770"
+black = "^19.10b0"
+isort = "^4.3.21"
+autoflake = "^1.3.1"
+flake8 = "^3.7.9"
+pytest = "^5.4.1"
+pytest-cov = "^2.8.1"
+mkdocs = "^1.1"
+mkdocs-material = "^5.1.5"
+markdown-include = "^0.5.1"
+
 [build-system]
-requires = ["flit"]
-build-backend = "flit.buildapi"
-
-[tool.flit.metadata]
-module = "fastrf"
-author = "Ian Cleary"
-author-email = "iancleary@pm.me"
-home-page = "https://github.com/iancleary/fastrf"
-classifiers = [
-    "License :: OSI Approved :: MIT License",
-    "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3 :: Only",
-]
-requires = [
-    "pydantic >=0.32.2,<2.0.0",
-    "fastapi >=0.32.2,<2.0.0"
-]
-description-file = "README.md"
-requires-python = ">=3.6"
-
-[tool.flit.metadata.urls]
-Documentation = "https://github.com/iancleary/fastrf"
-
-[tool.flit.metadata.requires-extra]
-test = [
-    "pytest >=4.0.0",
-    "pytest-cov",
-    "mypy",
-    "black",
-    "isort",
-    "autoflake"
-]
-doc = [
-    "mkdocs",
-    "mkdocs-material",
-    "markdown-include"
-]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

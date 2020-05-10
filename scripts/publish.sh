@@ -2,4 +2,5 @@
 
 set -e
 
-flit publish
+poetry build
+poetry publish

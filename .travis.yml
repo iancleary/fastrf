@@ -15,8 +15,8 @@ matrix:
         - python: "nightly"
 
 install:
-    - pip install flit
-    - flit install --symlink
+    - pip install poetry
+    - poetry install
 
 script:
     - bash scripts/test.sh
@@ -26,7 +26,7 @@ after_script:
 
 deploy:
   provider: script
-  script: bash scripts/deploy.sh
+  script: bash scripts/publish.sh
   on:
     tags: true
     python: "3.6"
