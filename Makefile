@@ -16,6 +16,21 @@ help:
 # adds anything that has a double # comment to the phony help list
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ".:*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+python-three-six:
+python-three-six: ## setup python3.6 virtual environment using poetry
+	poetry env use python3.6
+	poetry install
+
+python-three-seven:
+python-three-seven: ## setup python3.7 virtual environment using poetry
+	poetry env use python3.7
+	poetry install
+
+python-three-eight:
+python-three-eight: ## setup python3.6 virtual environment using poetry
+	poetry env use python3.8
+	poetry install
+
 lint: ## lint the code
 lint:
 	bash scripts/lint.sh
@@ -32,53 +47,9 @@ docs-live: ## make live docs
 docs-live:
 	bash scripts/docs-live.sh
 
-install: ## uninstall and install package with python
-install:
-	echo y | pip uninstall fastrf
-	python setup.py build
-	python setup.py install
+deploy-docs: ## deploy the docs, if on master branch
+deploy-docs:
+	# https://www.mkdocs.org/user-guide/deploying-your-docs/
 
-install-editable: ## uninstall and install package with python, editable
-install-editable:
-	# https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
-	echo y | pip uninstall fastrf
-	python setup.py build
-	python setup.py develop
-	# python -m pip install -e .
-
-develop:
-develop: ## Setups a Python3 (latest) development environment pipenv and flit
-	make develop-three-eight
-
-develop-three-eight:  ## Setups a Python3.8 development environment pipenv and flit
-develop-three-eight:
-	# https://flit.readthedocs.io/en/latest/cmdline.html
-	pipenv --python 3.8
-	pipenv run python3 -m pip install flit
-	pipenv run flit install
-	pipenv shell
-
-develop-three-seven:  ## Setups a python3.7 development environment pipenv and flit
-develop-three-seven:
-	# https://flit.readthedocs.io/en/latest/cmdline.html
-	pipenv --python 3.7
-	pipenv run python3 -m pip install flit
-	pipenv run flit install
-	pipenv shell
-
-develop-three-six:  ## Setups a python3.7 development environment pipenv and flit
-develop-three-six:
-	# https://flit.readthedocs.io/en/latest/cmdline.html
-	pipenv --python 3.6
-	pipenv run python3 -m pip install flit
-	pipenv run flit install
-	pipenv shell
-
-clean:
-clean: ## exists pipenv, cleans virtual environment
-	-pipenv --rm
-	rm -rf dist/
-	rm -rf .mypy_cache/
-	rm -rf .pytest_cache/
-	rm .coverage
-	rm Pipfile
+	# moved script to bash file for easy of reading
+	bash scripts/deploy-docs.sh
