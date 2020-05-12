@@ -28,9 +28,11 @@ THE SOFTWARE.
 
 --------------
 
-## Fastapi
+## Pydantic-SQLAlchemy
 
 [https://github.com/tiangolo/pydantic-sqlalchemy/](https://github.com/tiangolo/pydantic-sqlalchemy/)
+
+***Note: Attribution is for their Github Actions workflows.***
 
 The MIT License (MIT)
 
