@@ -2,7 +2,7 @@
 name = "fastrf"
 version = "0.0.0"
 description = "Library to create, store, query, and update Radio Frequency Models, Specs, and Reports"
-authors = ["Ian Cleary <iancleary@pm.me}>"]
+authors = ["Ian Cleary <iancleary@pm.me>"]
 license = "MIT"
 readme = "README.md"
 
