@@ -5,10 +5,12 @@
 </p>
 
 <p align="center">
-<a href="https://travis-ci.com/iancleary/fastrf" target="_blank">
-    <img src="https://travis-ci.com/iancleary/fastrf.svg?branch=master" alt="Build Status">
+<a href="https://github.com/iancleary/fastrf/actions?query=workflow%3ATest" target="_blank">
+    <img src="https://github.com/iancleary/fastrf/workflows/Test/badge.svg" alt="Test">
 </a>
-
+<a href="https://github.com/iancleary/fastrf/actions?query=workflow%3APublish" target="_blank">
+    <img src="https://github.com/iancleary/fastrf/workflows/Publish/badge.svg" alt="Publish">
+</a>
 <a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
 </a>
