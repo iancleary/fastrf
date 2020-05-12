@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastrf"
-version = "0.0.0"
+version = "0.0.3"
 description = "Library to create, store, query, and update Radio Frequency Models, Specs, and Reports"
 authors = ["Ian Cleary <iancleary@pm.me>"]
 license = "MIT"
