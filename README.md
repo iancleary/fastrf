@@ -51,7 +51,7 @@ Documentation is hosted at [fastrf.iancleary.me](https://fastrf.iancleary.me/).
 
 The `requirements.txt` and `runtime.txt` enable Netlify to build the docs.
 
-> They are not for fastrf development. pyproject.toml specifies flit settings
+> They are not for fastrf development. pyproject.toml specifies poetry's settings
 
 These are required to configure Netlify's deployment and pull request previews for mkdocs
 
