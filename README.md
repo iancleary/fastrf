@@ -12,7 +12,7 @@
     <img src="https://github.com/iancleary/fastrf/workflows/Publish/badge.svg" alt="Publish">
 </a>
 <a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
-    <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
+    <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf?color=%2334D058" alt="Coverage">
 </a>
 <a href="https://pypi.org/project/fastrf" target="_blank">
     <img src="https://img.shields.io/pypi/v/fastrf?color=%2334D058&label=pypi%20package" alt="Package version">
@@ -33,17 +33,17 @@ This project will stand on the shoulders of some giants:
 
 ## Features
 
-- flit (virtualenv and deployment to PyPi)
+- Poetry (virtualenv and deployment to PyPi)
 - black (linting/formatter)
 - autoflake (removing unused packages)
 - isort (dependency organization)
 - mypy (static type checking)
 - pytest (including test coverage)
-- travis-ci for CI/CD
+- GitHub Actions for CI/CD
 
 ## Documentation
 
-Documentation is hosted at[fastrf.iancleary.me](https://fastrf.iancleary.me/).
+Documentation is hosted at [fastrf.iancleary.me](https://fastrf.iancleary.me/).
 
 > Thank you to Netlify for builds and hosts the documentation 🙂🚀🎉!
 
@@ -77,15 +77,15 @@ Or you can clone `fastrf` and get started locally
 
 ```bash
 # install all dependencies (including dev)
-flit install
+make python-three-six
 ```
 
 ### Dependencies
 
-The `pyproject.toml` file is used by `flit` to install dependencies into a virtual environment.
+The `pyproject.toml` file is used by [poetry](https://python-poetry.org/) to install dependencies into a virtual environment.
 
-> Flit Command Line Interface documentation:
-> <https://flit.readthedocs.io/en/latest/cmdline.html>
+> Poetry Command Line Interface Documnetation:
+> <https://python-poetry.org/docs/cli/>
 
 ## Example Usage
 
@@ -96,11 +96,3 @@ import fastrf
 ```
 
 Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
-
-## Deploying to PyPi
-
-Using the flit package
-
-```bash
-./scripts/deploy.sh
-```
