@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf" alt="Coverage">
 </a>
 <a href="https://pypi.org/project/fastrf" target="_blank">
-    <img src="https://badge.fury.io/py/fastrf.svg" alt="Package version">
+    <img src="https://img.shields.io/pypi/v/fastrf?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
 <a href="https://pypi.org/project/fastrf/" target="_blank">
     <img src="https://img.shields.io/pypi/pyversions/fastrf.svg" alt="Python Versions">

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Switched version badge in readme to img.shields.io
+
 ## [0.0.3] - 2020-05-11
 
 ### Changed
