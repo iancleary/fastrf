@@ -2,5 +2,4 @@
 
 set -e
 
-poetry build
-poetry publish
+poetry publish --build
