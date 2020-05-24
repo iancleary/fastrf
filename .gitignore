@@ -18,3 +18,6 @@ build/
 
 # OS X
 .DS_Store
+
+# Code Editors
+.vscode
