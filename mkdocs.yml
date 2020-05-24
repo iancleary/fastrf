@@ -10,4 +10,9 @@ repo_url: https://github.com/iancleary/fastrf
 edit_uri: ''
 
 nav:
-    - fastrf: 'index.md'
+    - Introduction: 'index.md'
+    - Repository Mechanics:
+      - Development Tooling: 'repo_mechanics/development.md'
+      - Documentation Tooling: 'repo_mechanics//documentation.md'
+    - Attributions:
+      - Authors: 'attributions/authors.md'

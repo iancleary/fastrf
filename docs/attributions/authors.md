@@ -1,6 +1,6 @@
 # Author References
 
-## Fastapi
+## fastapi
 
 [https://github.com/tiangolo/fastapi/](https://github.com/tiangolo/fastapi/)
 
@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 --------------
 
-## Pydantic-SQLAlchemy
+## pydantic-sqlalchemy
 
 [https://github.com/tiangolo/pydantic-sqlalchemy/](https://github.com/tiangolo/pydantic-sqlalchemy/)
 
