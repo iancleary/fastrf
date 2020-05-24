@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "autoflake",
+        "fastapi",
+        "fastrf",
+        "isort",
+        "mkdocs",
+        "mypy",
+        "netlify",
+        "netlify's",
+        "pyproject",
+        "pytest",
+        "sqlalchemy"
+    ]
+}
