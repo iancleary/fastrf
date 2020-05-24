@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Initial Pydantic Models per [#20](https://github.com/iancleary/fastrf/pull/20)
+
 ### Changed
 
 - Switched version badge in readme to img.shields.io
