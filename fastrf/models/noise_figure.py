@@ -1,7 +1,7 @@
 from pydantic import BaseModel, confloat
 
-from ._unit_validators import dB_unit_check_validator
-from .frequency import Frequency
+from .common._unit_validators import dB_unit_check_validator
+from .common.frequency import Frequency
 
 
 class NoiseFigure(BaseModel):
