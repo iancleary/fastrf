@@ -15,6 +15,7 @@ class Frequency(BaseModel):
                 )
             )
 
+
 # How should ranges, channels and bands relate?  Inspiration for skrf?
 
 
