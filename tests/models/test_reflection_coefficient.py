@@ -1,7 +1,7 @@
 import pydantic
 import pytest
-from fastrf.models.common.frequency import Frequency
 from fastrf.models.interfaces.reflection_coefficient import ReflectionCoefficient
+from fastrf.models.signals.frequency import Frequency
 
 
 def test_reflection_coefficient_defaults():

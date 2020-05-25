@@ -1,7 +1,7 @@
 import pydantic
 import pytest
-from fastrf.models.common.frequency import Frequency
 from fastrf.models.interfaces.return_loss import ReturnLoss
+from fastrf.models.signals.frequency import Frequency
 
 
 def test_return_loss_defaults():

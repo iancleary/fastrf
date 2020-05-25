@@ -1,6 +1,6 @@
 import pydantic
 import pytest
-from fastrf.models.common.frequency import Frequency
+from fastrf.models.signals.frequency import Frequency
 
 
 def test_frequency_defaults():

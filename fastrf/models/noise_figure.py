@@ -1,7 +1,7 @@
 from pydantic import BaseModel, confloat
 
 from .common._unit_validators import dB_unit_check_validator
-from .common.frequency import Frequency
+from .signals.frequency import Frequency
 
 
 class NoiseFigure(BaseModel):
@@ -17,7 +17,7 @@ class NoiseFigure(BaseModel):
     value: confloat(strict=True, ge=1.0)
     unit: str = "dB"
 
-    _unit_must_be_in_allowed_set = dB_unit_check_validator()
+    _unit_must_be_dB = dB_unit_check_validator()
 
 
 # Need to consider how to handle frequency ranges first
