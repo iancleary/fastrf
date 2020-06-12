@@ -18,3 +18,11 @@ nav:
       - Documentation Tooling: 'repo_mechanics//documentation.md'
     - Attributions:
       - Authors: 'attributions/authors.md'
+
+markdown_extensions:
+- toc:
+    permalink: true
+- markdown.extensions.codehilite:
+    guess_lang: false
+- markdown_include.include:
+    base_path: docs
