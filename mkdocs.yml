@@ -11,6 +11,8 @@ edit_uri: ''
 
 nav:
     - Introduction: 'index.md'
+    - Tutorial:
+      - Models: 'tutorial/models.md'
     - Repository Mechanics:
       - Development Tooling: 'repo_mechanics/development.md'
       - Documentation Tooling: 'repo_mechanics//documentation.md'
