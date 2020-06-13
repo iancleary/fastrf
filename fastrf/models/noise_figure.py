@@ -4,7 +4,21 @@ from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigure(BaseModel):
+class NoiseFigureBase(BaseModel):
+    """[Noise Figure Base Model]
+
+    Arguments:
+        value {float} -- Noise Figure Value, in dB
+        unit {str}    -- decibels, dB
+    """
+
+    value: confloat(strict=True, ge=1.0)
+    unit: str = "dB"
+
+    _unit_must_be_dB = dB_unit_check_validator()
+
+
+class NoiseFigureFrequency(NoiseFigureBase):
     """[Noise Figure at a single frequency]
 
     Arguments:
@@ -14,10 +28,6 @@ class NoiseFigure(BaseModel):
     """
 
     f: Frequency
-    value: confloat(strict=True, ge=1.0)
-    unit: str = "dB"
-
-    _unit_must_be_dB = dB_unit_check_validator()
 
 
 # Need to consider how to handle frequency ranges first

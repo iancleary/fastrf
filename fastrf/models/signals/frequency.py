@@ -1,18 +1,6 @@
-from pydantic import BaseModel, confloat, validator
+from pydantic import BaseModel, confloat
 
-
-def frequency_unit_check(unit: str) -> None:
-    allowed_frequency_units = {"mHz", "Hz", "Khz", "MHz", "GHz", "THz"}
-    if unit not in allowed_frequency_units:
-        raise ValueError(
-            "unit: {unit}, must be in {allowed_frequency_units}".format(
-                unit=unit, allowed_frequency_units=allowed_frequency_units
-            )
-        )
-
-
-def frequency_unit_validator():
-    return validator("unit", allow_reuse=True)(frequency_unit_check)
+from ..common._unit_validators import frequency_unit_validator
 
 
 class Frequency(BaseModel):

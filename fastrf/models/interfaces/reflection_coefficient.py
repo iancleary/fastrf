@@ -4,7 +4,21 @@ from ..common._unit_validators import dB_unit_check_validator
 from ..signals.frequency import Frequency
 
 
-class ReflectionCoefficient(BaseModel):
+class ReflectionCoefficientBase(BaseModel):
+    """[Reflection Coefficient Base Model]
+
+    Arguments:
+        value {float} -- Reflection Coefficient Value, in dB
+        unit {str}    -- decibels, dB
+    """
+
+    value: confloat(strict=True, le=0.0)
+    unit: str = "dB"
+
+    _unit_must_be_dB = dB_unit_check_validator()
+
+
+class ReflectionCoefficientFrequency(ReflectionCoefficientBase):
     """[Reflection Coefficient at a single frequency]
 
     Arguments:
@@ -14,10 +28,6 @@ class ReflectionCoefficient(BaseModel):
     """
 
     f: Frequency
-    value: confloat(strict=True, le=0.0)
-    unit: str = "dB"
-
-    _unit_must_be_dB = dB_unit_check_validator()
 
 
 # class ReflectionCoefficientArray(BaseModel):

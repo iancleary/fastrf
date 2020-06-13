@@ -12,9 +12,74 @@ The purpose of these models are to capture the core concepts that comprise devic
 
 There is a little to unpack here, so let's walk through it
 
-```python
-from pydantic import BaseModel, confloat, validator
+```Python hl_lines="6"
+from pydantic import BaseModel, confloat
 
+from ..common._unit_validators import frequency_unit_validator
+
+
+class Frequency(BaseModel):
+    value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
+    unit: str = "Hz"  # SI Unit
+
+    _unit_must_be_in_allowed_set = frequency_unit_validator()
+
+```
+
+`unit` is a common attribute for any `fastrf` model that will always be a string representing the common unit.
+
+### Positive Frequencies
+
+`confloat` is a `float` type with extra validation.  In this case, it is required to have positive frequency greater than 0.0 Hz.
+
+```Python hl_lines="7"
+from pydantic import BaseModel, confloat
+
+from ..common._unit_validators import frequency_unit_validator
+
+
+class Frequency(BaseModel):
+    value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
+    unit: str = "Hz"  # SI Unit
+
+    _unit_must_be_in_allowed_set = frequency_unit_validator()
+
+```
+
+### Allowed units
+
+Notice that the unit is not required to be the scientific unit (only Hz and not kHz, MHz, etc. for Frequency).
+
+```Python hl_lines="8 9 10"
+from pydantic import BaseModel, confloat
+
+from ..common._unit_validators import frequency_unit_validator
+
+
+class Frequency(BaseModel):
+    value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
+    unit: str = "Hz"  # SI Unit
+
+    _unit_must_be_in_allowed_set = frequency_unit_validator()
+
+```
+
+This is primarily to bind `unit` to the model, so that it is not scattered throughout your code.
+
+> How does this work?
+
+#### Re-usable validators
+
+Pydantic has a concept of re-usable validators.
+
+The `fastrf.models.common._unit_validators.py` module is where common RF validators are located.
+
+We import `validator` from `pydantic` to be able to re-use the frequency unit validator multiple places.
+
+```Python hl_lines=" 1 6"
+from pydantic import validator
+
+...
 
 def frequency_unit_check(unit: str) -> None:
     allowed_frequency_units = {"mHz", "Hz", "Khz", "MHz", "GHz", "THz"}
@@ -28,26 +93,7 @@ def frequency_unit_check(unit: str) -> None:
 
 def frequency_unit_validator():
     return validator("unit", allow_reuse=True)(frequency_unit_check)
-
-
-class Frequency(BaseModel):
-    value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
-    unit: str = "Hz"  # SI Unit
-
-    _unit_must_be_in_allowed_set = frequency_unit_validator()
 ```
-
-`unit` is a common attribute for any `fastrf` model that will always be a string representing the common unit.  It is not required to be the scientific unit (only Hz and not kHz, MHz, etc. for Frequency).
-
-This is primarily to bind `unit` to the model, so that it is not scattered throughout your code.
-
-### Confloat
-
-`confloat` is a `float` type with extra validation.  In this case, it is required to have positive frequency greater than 0.0 Hz.
-
-### Validator
-
-We import `validator` from `pydantic` to be able to re-use the frequency unit validator multiple places.
 
 ### Linking models
 
@@ -61,53 +107,112 @@ I'm still working through how to link frequencies between a frequency instance a
 
 From `pydantic`, we've seen `BaseModel` and `confloat` in the Frequency model.
 
-Additionally, the `unit` attribute is used here as well.
+> **Unit validation is seen here as well!**
 
-```python
+```python hl_lines="3 12 16 18"
 from pydantic import BaseModel, confloat
 
 from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigure(BaseModel):
-    """[Noise Figure at a single frequency]
+class NoiseFigureBase(BaseModel):
+    """[Noise Figure Base Model]
 
     Arguments:
-        f {Frequency} -- Single Frequency
         value {float} -- Noise Figure Value, in dB
         unit {str}    -- decibels, dB
     """
 
-    f: Frequency
     value: confloat(strict=True, ge=1.0)
     unit: str = "dB"
 
     _unit_must_be_dB = dB_unit_check_validator()
 ```
 
-Noise figure must be positive and greater than 1.0 dB.
+> **Noise figure must be positive and greater than 1.0 dB.**
 
-The unit validator here enforces that the unit is "dB" and will be used in other models as well.
+```python hl_lines="3 11"
+...
+
+class NoiseFigureBase(BaseModel):
+    """[Noise Figure Base Model]
+
+    Arguments:
+        value {float} -- Noise Figure Value, in dB
+        unit {str}    -- decibels, dB
+    """
+
+    value: confloat(strict=True, ge=1.0)
+
+...
+```
 
 > Note that this is a model for a specification or measured value.  We are making an assumption that near perfect noise figure and measurement error doesn't result in an erroneous value < 1.0 dB.
 
-## Gain Transfer
+-----------------------------
 
-At a given input power, gain transfer is the measure of how much forward gain a two port device has.
+Let's continue with defining several models:
+
+* Power
+* GainBase
+* Gain (with input and output power)
+
+## Power
 
 First we define a model for Power:
 
-```Python hl_lines="3 4 5"
+> **Unit validation is seen here as well!**
+
+```Python hl_lines="6 10"
 from pydantic import BaseModel
+
+from .common._unit_validators import power_unit_validator
+
 
 class Power(BaseModel):
     value: float
     unit: str = "dBm"
 
+    _unit_must_be_in_allowed_set = power_unit_validator()
+
 ```
 
-Next, we set up a model for an input and output power
+Tell me if you see a pattern 😊
+
+-----------------------------
+
+## Gain
+
+Let's continue to Gain! 🎉
+
+```Python hl_lines="10 16 23"
+from typing import Optional
+
+from pydantic import BaseModel
+
+from .common._unit_validators import dB_unit_check_validator, power_unit_validator
+from .signals.frequency import Frequency
+
+...
+
+class GainBase(BaseModel):
+    value: float
+    unit: str = "dB"
+
+    _unit_must_be_dB = dB_unit_check_validator()
+
+
+class Gain(GainBase):
+    input_power: Optional[Power]
+    output_power: Optional[Power]
+```
+
+> We use the `Power` model to classify if the Gain value's operating points.
+
+-----------------------------
+
+## Gain Transfer
 
 ```Python hl_lines="9 10 11  13 23 24"
 from typing import Optional
@@ -139,3 +244,8 @@ class GainTransfer(BaseModel):
 
     _unit_must_be_dB = dB_unit_check_validator()
 ```
+
+-----------------------------
+
+
+Now that we have a sense for the common `Pydantic` models, let's talk about development tooling in the repo!

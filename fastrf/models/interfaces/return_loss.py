@@ -4,7 +4,21 @@ from ..common._unit_validators import dB_unit_check_validator
 from ..signals.frequency import Frequency
 
 
-class ReturnLoss(BaseModel):
+class ReturnLossBase(BaseModel):
+    """[Return Loss Base Model]
+
+    Arguments:
+        value {float} -- Return Loss Value, in dB
+        unit {str}    -- decibels, dB
+    """
+
+    value: confloat(strict=True, ge=0.0)
+    unit: str = "dB"
+
+    _unit_must_be_dB = dB_unit_check_validator()
+
+
+class ReturnLossFrequency(ReturnLossBase):
     """[Return Loss at a single frequency]
 
     Arguments:
@@ -14,10 +28,6 @@ class ReturnLoss(BaseModel):
     """
 
     f: Frequency
-    value: confloat(strict=True, ge=0.0)
-    unit: str = "dB"
-
-    _unit_must_be_dB = dB_unit_check_validator()
 
 
 # class ReturnLossArray(BaseModel):
