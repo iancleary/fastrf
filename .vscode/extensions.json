@@ -1,9 +1,0 @@
-{
-    "recommendations": [
-      "DavidAnson.vscode-markdownlint",
-      "ms-python.python",
-      "eamodio.gitlens",
-      "shardulm94.trailing-spaces",
-      "streetsidesoftware.code-spell-checker"
-    ]
-  }
