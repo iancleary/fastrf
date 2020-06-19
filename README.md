@@ -55,3 +55,5 @@ The `pyproject.toml` file is used by [poetry](https://python-poetry.org/) to ins
 > <https://python-poetry.org/docs/cli/>
 
 Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
+
+> This package was created with the [iancleary/pypackage](https://github.com/iancleary/pypackage) cookiecutter.
