@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-[![]()]()
+
 <a href="https://app.netlify.com/sites/fastrf/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/3c2a6494-9acb-40ce-b23e-da29a2d0bd91/deploy-status" alt="Netlify Status">
 <a href="https://github.com/iancleary/fastrf/actions?query=workflow%3ATest" target="_blank">
