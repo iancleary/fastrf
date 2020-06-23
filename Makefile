@@ -35,16 +35,16 @@ python-three-eight: ## setup python3.6 virtual environment using poetry (run poe
 
 lint: ## lint the code
 lint:
-	bash scripts/lint.sh
+	poetry run task lint
 
 format: ## format the code
 format:
-	bash scripts/format.sh
+	poetry run task format
 
 test: ## lint the code
 test:
-	bash scripts/test.sh
+	poetry run task test
 
 mkdocs: ## make live docs
 mkdocs:
-	bash scripts/docs-live.sh
+	poetry run task mkdocs
