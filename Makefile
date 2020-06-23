@@ -48,3 +48,7 @@ test:
 mkdocs: ## make live docs
 mkdocs:
 	poetry run task mkdocs
+
+pre-commit: ## setup pre-commit hooks
+pre-commit:
+	poetry run task pre-commit
