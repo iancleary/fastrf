@@ -14,7 +14,7 @@ Please walk through the [example from asgi-lifespan](https://github.com/florimon
 
 The main differences from the [example from asgi-lifespan](https://github.com/florimondmanca/asgi-lifespan#sending-lifespan-events-for-testing) are highlighted below.
 
-```Python hl_lines="4 5 15 16 17 18 29"
+```Python hl_lines="4 5 15 16 17 18 28"
 import httpx
 import pytest
 from asgi_lifespan import LifespanManager
