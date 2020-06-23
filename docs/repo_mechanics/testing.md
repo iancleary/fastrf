@@ -42,9 +42,8 @@ async def test_app():
 @pytest.fixture
 async def client(test_app):
     async with httpx.AsyncClient(
-            app=app,
-            base_url="http://localhost:8888"
-        ) as client:
+        app=test_app, base_url="http://localhost:8888"
+    ) as client:
         print("Client is ready")
         yield client
 ```
