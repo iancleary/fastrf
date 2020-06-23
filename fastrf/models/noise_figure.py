@@ -17,6 +17,8 @@ class NoiseFigureBase(BaseModel):
 
     _unit_must_be_dB = dB_unit_check_validator()
 
+class NoiseFigureCreateIn(NoiseFigureBase):
+    pass
 
 class NoiseFigureFrequency(NoiseFigureBase):
     """[Noise Figure at a single frequency]
