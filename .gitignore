@@ -15,6 +15,7 @@ Pipfile
 Pipfile.lock
 build/
 *.egg-info/
+*.pyc
 
 # OS X
 .DS_Store

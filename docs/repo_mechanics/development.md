@@ -8,6 +8,7 @@
 | [isort](https://github.com/timothycrosley/isort)  |  Dependency organization |
 | [mypy](https://github.com/python/mypy)  |  Static Typing |
 | [pytest](https://docs.pytest.org/en/latest/)  |  Test Coverage |
+| [pre-commit](https://pre-commit.com/) | Git hook scripts to not waste time |
 | [GitHub Actions](https://github.com/features/actions)  | Test and Publish (to PyPi) workflows |
 
 ## Poetry
@@ -36,6 +37,7 @@ lint:                lint the code
 format:              format the code
 test:                lint the code
 mkdocs:              make live docs
+pre-commit:          setup pre-commit hooks
 
 > Note: the above uses the ZSH shell
 

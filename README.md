@@ -14,6 +14,9 @@
 <a href="https://github.com/iancleary/fastrf/actions?query=workflow%3APublish" target="_blank">
     <img src="https://github.com/iancleary/fastrf/workflows/Publish/badge.svg" alt="Publish">
 </a>
+<a href="https://dependabot.com/" target="_blank">
+    <img src="https://flat.badgen.net/dependabot/iancleary/fastrf?icon=dependabot" alt="Dependabot Enabled">
+</a>
 <a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf?color=%2334D058" alt="Coverage">
 </a>
