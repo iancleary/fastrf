@@ -28,7 +28,7 @@ taskipy = "^1.2.1"
 asgi-lifespan = "1.*"
 httpx = "^0.13.3"
 pytest-asyncio = "^0.14.0"
-pre-commit = "^2.5.1"
+pre-commit = "^2.6.0"
 
 [tool.taskipy.tasks]
 test = "bash scripts/test.sh"
