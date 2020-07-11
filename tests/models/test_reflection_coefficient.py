@@ -1,5 +1,6 @@
 import pydantic
 import pytest
+from fastapi_camelcase import CamelModel
 
 from fastrf.models.interfaces.reflection_coefficient import (
     ReflectionCoefficientBase,
@@ -11,6 +12,11 @@ from fastrf.models.signals.frequency import Frequency
 def test_reflection_coefficient_base():
     reflection_coefficient = ReflectionCoefficientBase(value=-20.0)
     assert isinstance(reflection_coefficient, ReflectionCoefficientBase) == True
+
+
+def test_reflection_coefficient_base_class():
+    return_loss = ReflectionCoefficientBase(value=-20.0)
+    assert isinstance(return_loss, CamelModel) == True
 
 
 def test_reflection_coefficient_frequency():

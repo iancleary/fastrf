@@ -1,5 +1,6 @@
 import pydantic
 import pytest
+from fastapi_camelcase import CamelModel
 
 from fastrf.models.gain_transfer import (
     Gain,
@@ -24,6 +25,11 @@ def test_power_improper_unit():
 def test_gain_base():
     gain_transfer = Gain(value=60.0)
     assert isinstance(gain_transfer, GainBase) == True
+
+
+def test_gain_base_class():
+    gain_transfer = Gain(value=60.0)
+    assert isinstance(gain_transfer, CamelModel) == True
 
 
 def test_gain():
