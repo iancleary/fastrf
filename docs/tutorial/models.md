@@ -4,21 +4,40 @@
 
 The purpose of these models are to capture the core concepts that comprise devices used in RF Engineering, such that these standard schemas can be used to describe parts, specifications, and their compliance from initial definition to through the complete lifecycle of the part.
 
+## CamelCase Base Models
+
+```python
+from pydantic import BaseModel
+```
+
+is essentially equivalent to:
+
+```python
+from fastapi_camelcase import CamelModel
+```
+
+> For this tutorial, `fastapi_camelcase`'s `CamelModel` is fully backwards compatible extension of `pydantic`'s `BaseModel`!
+
+`CamelModel` extends Pydantic's `BaseModel` conversion of PEP8 variables to and from camelCase automatically!
+
+If you want more information, the author has a great blog post about it: [Ahmed Nafies' "CamelCase Models with FastAPI and Pydantic"](https://medium.com/analytics-vidhya/camel-case-models-with-fast-api-and-pydantic-5a8acb6c0eee)
+
 ## Walkthrough
 
 **Let's start with the common attributes**, like frequency, noise figure, gain transfer, and return loss (and reflection coefficient).
 
 ## Frequency
 
-There is a little to unpack here, so let's walk through it
+There is a little to unpack here, so let's walk through it.
 
-```Python hl_lines="6"
-from pydantic import BaseModel, confloat
+```Python hl_lines="7"
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import frequency_unit_validator
 
 
-class Frequency(BaseModel):
+class Frequency(CamelModel):
     value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
     unit: str = "Hz"  # SI Unit
 
@@ -32,13 +51,14 @@ class Frequency(BaseModel):
 
 `confloat` is a `float` type with extra validation.  In this case, it is required to have positive frequency greater than 0.0 Hz.
 
-```Python hl_lines="7"
-from pydantic import BaseModel, confloat
+```Python hl_lines="8"
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import frequency_unit_validator
 
 
-class Frequency(BaseModel):
+class Frequency(CamelModel):
     value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
     unit: str = "Hz"  # SI Unit
 
@@ -50,13 +70,14 @@ class Frequency(BaseModel):
 
 Notice that the unit is not required to be the scientific unit (only Hz and not kHz, MHz, etc. for Frequency).
 
-```Python hl_lines="8 9 10"
-from pydantic import BaseModel, confloat
+```Python hl_lines="9 10 11"
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import frequency_unit_validator
 
 
-class Frequency(BaseModel):
+class Frequency(CamelModel):
     value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
     unit: str = "Hz"  # SI Unit
 
@@ -109,14 +130,15 @@ From `pydantic`, we've seen `BaseModel` and `confloat` in the Frequency model.
 
 > **Unit validation is seen here as well!**
 
-```python hl_lines="3 12 16 18"
-from pydantic import BaseModel, confloat
+```python hl_lines="4 13 17 19"
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigureBase(BaseModel):
+class NoiseFigureBase(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -135,7 +157,7 @@ class NoiseFigureBase(BaseModel):
 ```python hl_lines="3 11"
 ...
 
-class NoiseFigureBase(BaseModel):
+class NoiseFigureBase(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -165,7 +187,7 @@ First we define a model for Power:
 > **Unit validation is seen here as well!**
 
 ```Python hl_lines="6 10"
-from pydantic import BaseModel
+from fastapi_camelcase import CamelModel
 
 from .common._unit_validators import power_unit_validator
 
@@ -189,14 +211,14 @@ Let's continue to Gain! 🎉
 ```Python hl_lines="10 16 23"
 from typing import Optional
 
-from pydantic import BaseModel
+from fastapi_camelcase import CamelModel
 
 from .common._unit_validators import dB_unit_check_validator, power_unit_validator
 from .signals.frequency import Frequency
 
 ...
 
-class GainBase(BaseModel):
+class GainBase(CamelModel):
     value: float
     unit: str = "dB"
 
@@ -217,17 +239,17 @@ class Gain(GainBase):
 ```Python hl_lines="9 10 11  13 23 24"
 from typing import Optional
 
-from pydantic import BaseModel
+from fastapi_camelcase import CamelModel
 
 from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class Power(BaseModel):
+class Power(CamelModel):
     value: float
     unit: str = "dBm"
 
-class GainTransfer(BaseModel):
+class GainTransfer(CamelModel):
     """[Input Power vs. Output Power at a single frequency]
 
     Arguments:

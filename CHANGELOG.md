@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial Pydantic Models per [#20](https://github.com/iancleary/fastrf/pull/20)
 - Initial Application Skeleton per [#35](https://github.com/iancleary/fastrf/pull/35)
+- Added `fastapi_camelcase` for better Consumer compatibility (not just Python's [lower_case_with_underscores](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles))
 
 ### Changed
 
