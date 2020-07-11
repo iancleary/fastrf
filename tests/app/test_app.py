@@ -1,6 +1,7 @@
 import httpx
 import pytest
 from asgi_lifespan import LifespanManager
+
 from fastrf.app.main import app
 from fastrf.app.routes.noise_figure import router as noise_figure_router
 

@@ -2,6 +2,7 @@ import uuid
 from typing import Dict, List, Union
 
 from fastapi import APIRouter
+
 from fastrf.models.noise_figure import NoiseFigureBase, NoiseFigureCreateIn
 
 router = APIRouter()

@@ -1,10 +1,11 @@
-from pydantic import BaseModel, confloat
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigureCreateIn(BaseModel):
+class NoiseFigureCreateIn(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:

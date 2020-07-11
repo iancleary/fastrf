@@ -1,5 +1,6 @@
 import pydantic
 import pytest
+
 from fastrf.models.interfaces.reflection_coefficient import (
     ReflectionCoefficientBase,
     ReflectionCoefficientFrequency,

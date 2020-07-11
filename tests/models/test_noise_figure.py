@@ -1,5 +1,6 @@
 import pydantic
 import pytest
+
 from fastrf.models.noise_figure import NoiseFigureBase, NoiseFigureFrequency
 from fastrf.models.signals.frequency import Frequency
 

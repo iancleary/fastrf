@@ -1,5 +1,6 @@
 import pydantic
 import pytest
+
 from fastrf.models.signals.frequency import Frequency
 
 

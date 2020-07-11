@@ -1,10 +1,11 @@
-from pydantic import BaseModel, confloat
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import dB_unit_check_validator
 from ..signals.frequency import Frequency
 
 
-class ReturnLossBase(BaseModel):
+class ReturnLossBase(CamelModel):
     """[Return Loss Base Model]
 
     Arguments:
@@ -30,7 +31,7 @@ class ReturnLossFrequency(ReturnLossBase):
     f: Frequency
 
 
-# class ReturnLossArray(BaseModel):
+# class ReturnLossArray(CamelModel):
 #     """[Return Loss vs. Frequency]
 
 #     Arguments:
