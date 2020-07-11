@@ -13,11 +13,12 @@ nav:
     - Introduction: 'index.md'
     - Tutorial:
       - Models: 'tutorial/models.md'
+      - Types: 'tutorial/types.md'
     - Repository Mechanics:
-      - Contributing: 'repo_mechanics/contributing.md'
-      - Documentation Tooling: 'repo_mechanics/documentation.md'
       - Development Tooling: 'repo_mechanics/development.md'
+      - Documentation Tooling: 'repo_mechanics/documentation.md'
       - Testing Overview: 'repo_mechanics/testing.md'
+      - Contributing: 'repo_mechanics/contributing.md'
     - Attributions:
       - Authors: 'attributions/authors.md'
 

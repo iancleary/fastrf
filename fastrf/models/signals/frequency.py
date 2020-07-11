@@ -1,9 +1,10 @@
-from pydantic import BaseModel, confloat
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import frequency_unit_validator
 
 
-class Frequency(BaseModel):
+class Frequency(CamelModel):
     value: confloat(strict=True, ge=0.0)  # Assuming negative frequencies are not needed
     unit: str = "Hz"  # SI Unit
 
@@ -13,7 +14,7 @@ class Frequency(BaseModel):
 # How should ranges, channels and bands relate?  Inspiration for skrf?
 
 
-# class FrequencyRange(BaseModel):
+# class FrequencyRange(CamelModel):
 #     start: Frequency
 #     stop: Frequency
 #     step: Frequency

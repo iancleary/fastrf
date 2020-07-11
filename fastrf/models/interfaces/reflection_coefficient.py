@@ -1,10 +1,11 @@
-from pydantic import BaseModel, confloat
+from fastapi_camelcase import CamelModel
+from pydantic import confloat
 
 from ..common._unit_validators import dB_unit_check_validator
 from ..signals.frequency import Frequency
 
 
-class ReflectionCoefficientBase(BaseModel):
+class ReflectionCoefficientBase(CamelModel):
     """[Reflection Coefficient Base Model]
 
     Arguments:
@@ -30,7 +31,7 @@ class ReflectionCoefficientFrequency(ReflectionCoefficientBase):
     f: Frequency
 
 
-# class ReflectionCoefficientArray(BaseModel):
+# class ReflectionCoefficientArray(CamelModel):
 #     """[Reflection Coefficient vs. Frequency]
 
 #     Arguments:

@@ -1,19 +1,19 @@
 from typing import Optional
 
-from pydantic import BaseModel
+from fastapi_camelcase import CamelModel
 
 from .common._unit_validators import dB_unit_check_validator, power_unit_validator
 from .signals.frequency import Frequency
 
 
-class Power(BaseModel):
+class Power(CamelModel):
     value: float
     unit: str = "dBm"
 
     _unit_must_be_in_allowed_set = power_unit_validator()
 
 
-class GainBase(BaseModel):
+class GainBase(CamelModel):
     value: float
     unit: str = "dB"
 
@@ -25,7 +25,7 @@ class Gain(GainBase):
     output_power: Optional[Power]
 
 
-class GainTransferBase(BaseModel):
+class GainTransferBase(CamelModel):
     """[Input Power vs. Output Power Base Model]
 
     Arguments:
@@ -43,7 +43,7 @@ class GainTransferBase(BaseModel):
     _unit_must_be_dB = dB_unit_check_validator()
 
 
-class GainTransferFrequency(BaseModel):
+class GainTransferFrequency(CamelModel):
     """[Input Power vs. Output Power at a single frequency]
 
     Arguments:

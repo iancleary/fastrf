@@ -1,11 +1,18 @@
 import pydantic
 import pytest
+from fastapi_camelcase import CamelModel
+
 from fastrf.models.signals.frequency import Frequency
 
 
 def test_frequency_defaults():
     cw_signal = Frequency(value=10.0)
     assert isinstance(cw_signal, Frequency) == True
+
+
+def test_frequency_class():
+    cw_signal = Frequency(value=10.0)
+    assert isinstance(cw_signal, CamelModel) == True
 
 
 def test_negative_frequency():

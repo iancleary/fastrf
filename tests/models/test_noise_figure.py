@@ -1,5 +1,7 @@
 import pydantic
 import pytest
+from fastapi_camelcase import CamelModel
+
 from fastrf.models.noise_figure import NoiseFigureBase, NoiseFigureFrequency
 from fastrf.models.signals.frequency import Frequency
 
@@ -7,6 +9,11 @@ from fastrf.models.signals.frequency import Frequency
 def test_noise_figure_base():
     noise_figure = NoiseFigureBase(value=2.1)
     assert isinstance(noise_figure, NoiseFigureBase) == True
+
+
+def test_noise_figure_base_class():
+    noise_figure = NoiseFigureBase(value=2.1)
+    assert isinstance(noise_figure, CamelModel) == True
 
 
 def test_noise_figure_at_frequency_defaults():
