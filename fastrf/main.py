@@ -1,7 +1,7 @@
 # isort:skip_file
 
-from .application import app
-from .routes.noise_figure import router as noise_figure_router
+from fastrf.app.application import app
+from fastrf.app.routes.noise_figure import router as noise_figure_router
 
 
 ROUTERS = (noise_figure_router,)
