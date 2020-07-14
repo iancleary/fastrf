@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2020-07-13
+
+### Changed
+
+- Application `main.py` location per [#50](https://github.com/iancleary/fastrf/pull/50)
+
 ## [0.1.0] - 2020-07-13
 
 ### Added
@@ -41,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Conception!
 
-[Unreleased]: https://github.com/iancleary/fastrf/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/iancleary/fastrf/compare/v0.1.1...HEAD
+[0.1.0]: https://github.com/iancleary/fastrf/releases/tag/v0.1.1
 [0.1.0]: https://github.com/iancleary/fastrf/releases/tag/v0.1.0
 [0.0.3]: https://github.com/iancleary/fastrf/releases/tag/v0.0.3
 [0.0.2]: https://github.com/iancleary/fastrf/releases/tag/v0.0.2
