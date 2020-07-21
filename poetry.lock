@@ -171,7 +171,7 @@ description = "FastAPI framework, high performance, easy to learn, fast to code,
 name = "fastapi"
 optional = false
 python-versions = ">=3.6"
-version = "0.59.0"
+version = "0.60.0"
 
 [package.dependencies]
 pydantic = ">=0.32.2,<2.0.0"
@@ -995,7 +995,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "e9f1ca7f364814746e06b69e801e87681a1515df2933d6e7710c49544b6f9105"
+content-hash = "064be251ca4f67824657db10e9670ee7fac116b58e88ea0dec3e064887c3f4b6"
 python-versions = "^3.6.1"
 
 [metadata.files]
@@ -1090,8 +1090,8 @@ distlib = [
     {file = "distlib-0.3.0.zip", hash = "sha256:2e166e231a26b36d6dfe35a48c4464346620f8645ed0ace01ee31822b288de21"},
 ]
 fastapi = [
-    {file = "fastapi-0.59.0-py3-none-any.whl", hash = "sha256:50b58aa3e7d5bcb4a4404ac7e550cc53f0cf7ca0fd13c7fd515693dc23c9caef"},
-    {file = "fastapi-0.59.0.tar.gz", hash = "sha256:c04dacd3deed0fd0ffdcdb116b5a04ffa257656885be7fae7234f4f62ec4a0a9"},
+    {file = "fastapi-0.60.0-py3-none-any.whl", hash = "sha256:89eb70159b211a4d3861acfb238d066f6660b6435ec99650bbea2f8ef02526fa"},
+    {file = "fastapi-0.60.0.tar.gz", hash = "sha256:0676191f7822da4499783c22a2355d0d25442b62a47273de518e8ea51567a12b"},
 ]
 fastapi-camelcase = [
     {file = "fastapi_camelcase-1.0.1.tar.gz", hash = "sha256:a74cd8088464ad2f1c80a6a66dd46654ba425d08cd0201cc97716bdcaa5195c3"},
