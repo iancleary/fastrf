@@ -189,7 +189,7 @@ description = "Package provides an easy way to have camelcase request/response b
 name = "fastapi-camelcase"
 optional = false
 python-versions = ">=3.6"
-version = "1.0.1"
+version = "1.0.2"
 
 [package.dependencies]
 pydantic = "*"
@@ -1094,7 +1094,7 @@ fastapi = [
     {file = "fastapi-0.59.0.tar.gz", hash = "sha256:c04dacd3deed0fd0ffdcdb116b5a04ffa257656885be7fae7234f4f62ec4a0a9"},
 ]
 fastapi-camelcase = [
-    {file = "fastapi_camelcase-1.0.1.tar.gz", hash = "sha256:a74cd8088464ad2f1c80a6a66dd46654ba425d08cd0201cc97716bdcaa5195c3"},
+    {file = "fastapi_camelcase-1.0.2.tar.gz", hash = "sha256:1d852149f6c9e5bb8002839a1e024050af917f1944b9d108d56468d64c6da279"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
