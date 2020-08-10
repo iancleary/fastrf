@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.6.1"
 pydantic = "^1.5.1"
-fastapi = ">=0.58,<0.60"
+fastapi = ">=0.58,<0.62"
 uvicorn = "^0.11.5"
 uuid = "^1.30"
 fastapi_camelcase = "^1.0.1"
