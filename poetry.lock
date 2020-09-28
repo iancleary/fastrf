@@ -267,7 +267,7 @@ description = "The next generation HTTP client."
 name = "httpx"
 optional = false
 python-versions = ">=3.6"
-version = "0.15.2"
+version = "0.15.4"
 
 [package.dependencies]
 certifi = "*"
@@ -973,7 +973,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "fae7f55560b411f017cdb8b90e1d8f48f10a24ef965119b78220e28ccaac1183"
+content-hash = "f11bff1a459f2bc7e72faf2c924e72db6cd0704c79048b6e0918c19b069196ed"
 lock-version = "1.0"
 python-versions = "^3.6.1"
 
@@ -1104,8 +1104,8 @@ httptools = [
     {file = "httptools-0.1.1.tar.gz", hash = "sha256:41b573cf33f64a8f8f3400d0a7faf48e1888582b6f6e02b82b9bd4f0bf7497ce"},
 ]
 httpx = [
-    {file = "httpx-0.15.2-py3-none-any.whl", hash = "sha256:a2bd6eb6d52f0fbd3b082fc8a37b1f50d6112352a83aa04a60f4107f723b018e"},
-    {file = "httpx-0.15.2.tar.gz", hash = "sha256:713a2deaf96d85bbd4a1fbdf0edb27d6b4ee2c9aaeda8433042367e4b9e1628d"},
+    {file = "httpx-0.15.4-py3-none-any.whl", hash = "sha256:7b3c07bfdcdadd92020dd4c07b15932abdcf1c898422a4e98de3d19b2223310b"},
+    {file = "httpx-0.15.4.tar.gz", hash = "sha256:4c81dbf98a29cb4f51f415140df56542f9d4860798d713e336642e953cddd1db"},
 ]
 identify = [
     {file = "identify-1.4.20-py2.py3-none-any.whl", hash = "sha256:acf0712ab4042642e8f44e9532d95c26fbe60c0ab8b6e5b654dd1bc6512810e0"},
