@@ -33,6 +33,10 @@ python-three-eight: ## setup python3.6 virtual environment using poetry (run poe
 	poetry env use python3.8
 	poetry shell
 
+install: ## Install dependencies (make sure you're in a virtual environment)
+install:
+	poetry install
+
 lint: ## lint the code
 lint:
 	poetry run task lint
