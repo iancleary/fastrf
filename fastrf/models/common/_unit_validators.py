@@ -24,18 +24,37 @@ def power_unit_validator():
     return validator("unit", allow_reuse=True)(power_unit_check)
 
 
+ALLOWED_FREQUENCY_UNITS = {"mHz", "Hz", "Khz", "MHz", "GHz", "THz"}
+
+
 def frequency_unit_check(unit: str) -> None:
-    allowed_frequency_units = {"mHz", "Hz", "Khz", "MHz", "GHz", "THz"}
-    if unit not in allowed_frequency_units:
+    if unit not in ALLOWED_FREQUENCY_UNITS:
         raise ValueError(
             "unit: {unit}, must be in {allowed_frequency_units}".format(
-                unit=unit, allowed_frequency_units=allowed_frequency_units
+                unit=unit, allowed_frequency_units=ALLOWED_FREQUENCY_UNITS
             )
         )
 
 
 def frequency_unit_validator():
     return validator("unit", allow_reuse=True)(frequency_unit_check)
+
+
+# def frequency_step_check(cls, values):
+#     start, stop, step = values.get('start'), values.get('stop'), values.get('step')
+
+#     number_of_steps = (
+#         start.get_value_in_hz() - stop.get_value_in_hz()
+#     ) / step.get_value_in_hz()
+#     print(number_of_steps)
+#     if isinstance(number_of_steps, int):
+#         return step
+#     else:
+#         raise ValueError("step is not a multiple between start and stop")
+
+
+# def frequency_step_validator():
+#     return root_validator("step", allow_reuse=True)(frequency_step_check)
 
 
 # ----------------------------------------------------------------------
