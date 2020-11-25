@@ -770,7 +770,7 @@ full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "p
 
 [[package]]
 name = "taskipy"
-version = "1.4.0"
+version = "1.5.0"
 description = "tasks runner for python projects"
 category = "dev"
 optional = false
@@ -882,7 +882,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "7414d816c1f7e55a85c2c3849ac46796c1fe4534fc4b4e7854025ae85708767a"
+content-hash = "4b96c99b9284d422782b18abb33ef3d2489799f0e6b9994c10fbd7da5c88d702"
 
 [metadata.files]
 appdirs = [
@@ -1246,6 +1246,8 @@ pyyaml = [
     {file = "PyYAML-5.3.1-cp37-cp37m-win_amd64.whl", hash = "sha256:73f099454b799e05e5ab51423c7bcf361c58d3206fa7b0d555426b1f4d9a3eaf"},
     {file = "PyYAML-5.3.1-cp38-cp38-win32.whl", hash = "sha256:06a0d7ba600ce0b2d2fe2e78453a470b5a6e000a985dd4a4e54e436cc36b0e97"},
     {file = "PyYAML-5.3.1-cp38-cp38-win_amd64.whl", hash = "sha256:95f71d2af0ff4227885f7a6605c37fd53d3a106fcab511b8860ecca9fcf400ee"},
+    {file = "PyYAML-5.3.1-cp39-cp39-win32.whl", hash = "sha256:ad9c67312c84def58f3c04504727ca879cb0013b2517c85a9a253f0cb6380c0a"},
+    {file = "PyYAML-5.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:6034f55dab5fea9e53f436aa68fa3ace2634918e8b5994d82f3621c04ff5ed2e"},
     {file = "PyYAML-5.3.1.tar.gz", hash = "sha256:b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"},
 ]
 regex = [
@@ -1310,8 +1312,8 @@ starlette = [
     {file = "starlette-0.13.6.tar.gz", hash = "sha256:ebe8ee08d9be96a3c9f31b2cb2a24dbdf845247b745664bd8a3f9bd0c977fdbc"},
 ]
 taskipy = [
-    {file = "taskipy-1.4.0-py3-none-any.whl", hash = "sha256:2caa3d4897aee1e17eddabf7b92b3a8d8824eb17d3932b69381b8306883c106a"},
-    {file = "taskipy-1.4.0.tar.gz", hash = "sha256:9fa86f9d7b5816d7ef789bc1631ee3bf78290554e251dc2dc29cb9ddbf9ebe1e"},
+    {file = "taskipy-1.5.0-py3-none-any.whl", hash = "sha256:61747793dbf059164f8b19143a83ae67758f994c2ed701d51311538a388ee7ec"},
+    {file = "taskipy-1.5.0.tar.gz", hash = "sha256:2a40f8494d4fbd986f98680e695aac8a741142ad6c018926d9de201822f97077"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
