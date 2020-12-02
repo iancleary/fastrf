@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Application `main.py` location per [#50](https://github.com/iancleary/fastrf/pull/50)
+- Fix setting up Poetry for GitHub Actions
 
 ## [0.1.0] - 2020-07-13
 
