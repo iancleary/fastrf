@@ -382,11 +382,11 @@ languages = ["nltk (>=3.2.5,<3.5)", "nltk (>=3.2.5)"]
 
 [[package]]
 name = "markdown"
-version = "3.3.3"
+version = "3.2.2"
 description = "Python implementation of Markdown."
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.5"
 
 [package.dependencies]
 importlib-metadata = {version = "*", markers = "python_version < \"3.8\""}
@@ -440,14 +440,14 @@ tornado = ">=5.0"
 
 [[package]]
 name = "mkdocs-material"
-version = "6.1.7"
+version = "6.2.1"
 description = "A Material Design theme for MkDocs"
 category = "dev"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-markdown = ">=3.2"
+markdown = ">=3.2,<3.3"
 mkdocs = ">=1.1"
 mkdocs-material-extensions = ">=1.0"
 Pygments = ">=2.4"
@@ -890,7 +890,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "91244d8605afc6dc0ed15edc5f9d298703052f32ef4c27d5e78f2f3f324257ba"
+content-hash = "9aa06853bfad06c124cf1ff8a23c15ea8ff4613eeb7e91143f1533014a8337bb"
 
 [metadata.files]
 appdirs = [
@@ -1066,8 +1066,8 @@ lunr = [
     {file = "lunr-0.5.8.tar.gz", hash = "sha256:c4fb063b98eff775dd638b3df380008ae85e6cb1d1a24d1cd81a10ef6391c26e"},
 ]
 markdown = [
-    {file = "Markdown-3.3.3-py3-none-any.whl", hash = "sha256:c109c15b7dc20a9ac454c9e6025927d44460b85bd039da028d85e2b6d0bcc328"},
-    {file = "Markdown-3.3.3.tar.gz", hash = "sha256:5d9f2b5ca24bc4c7a390d22323ca4bad200368612b5aaa7796babf971d2b2f18"},
+    {file = "Markdown-3.2.2-py3-none-any.whl", hash = "sha256:c467cd6233885534bf0fe96e62e3cf46cfc1605112356c4f9981512b8174de59"},
+    {file = "Markdown-3.2.2.tar.gz", hash = "sha256:1fafe3f1ecabfb514a5285fca634a53c1b32a81cb0feb154264d55bf2ff22c17"},
 ]
 markdown-include = [
     {file = "markdown-include-0.6.0.tar.gz", hash = "sha256:6f5d680e36f7780c7f0f61dca53ca581bd50d1b56137ddcd6353efafa0c3e4a2"},
@@ -1116,8 +1116,8 @@ mkdocs = [
     {file = "mkdocs-1.1.2.tar.gz", hash = "sha256:f0b61e5402b99d7789efa032c7a74c90a20220a9c81749da06dbfbcbd52ffb39"},
 ]
 mkdocs-material = [
-    {file = "mkdocs-material-6.1.7.tar.gz", hash = "sha256:44e28f5f4ac3728c80fc9831cbda428e807b6b38473130acc45da6e62ce7f866"},
-    {file = "mkdocs_material-6.1.7-py2.py3-none-any.whl", hash = "sha256:af993fac90a91bdce2385227f682abcdaa55434b6bfaff52a8b6f4dd56634f54"},
+    {file = "mkdocs-material-6.2.1.tar.gz", hash = "sha256:8d9b18fe670c39fd04ef847b4f71746b7d3e085cb0d041aa18d31e67a03f4171"},
+    {file = "mkdocs_material-6.2.1-py2.py3-none-any.whl", hash = "sha256:e7ba94dc8b0484d99ed44cc5dbfa2ae0c8c286efd0eb01ad9ec157baf309ab92"},
 ]
 mkdocs-material-extensions = [
     {file = "mkdocs-material-extensions-1.0.1.tar.gz", hash = "sha256:6947fb7f5e4291e3c61405bad3539d81e0b3cd62ae0d66ced018128af509c68f"},
