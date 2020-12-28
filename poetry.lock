@@ -777,7 +777,7 @@ full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "p
 
 [[package]]
 name = "taskipy"
-version = "1.5.1"
+version = "1.6.0"
 description = "tasks runner for python projects"
 category = "dev"
 optional = false
@@ -890,7 +890,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "0bc9e01bd3c60e9868f4c625598bacf064d4baa578a513991464560235230c7c"
+content-hash = "98906cce6b659b9df84c017db241f3e3de6b9443494557b3c25f36408aef7748"
 
 [metadata.files]
 appdirs = [
@@ -1324,8 +1324,8 @@ starlette = [
     {file = "starlette-0.13.6.tar.gz", hash = "sha256:ebe8ee08d9be96a3c9f31b2cb2a24dbdf845247b745664bd8a3f9bd0c977fdbc"},
 ]
 taskipy = [
-    {file = "taskipy-1.5.1-py3-none-any.whl", hash = "sha256:2cf0080a8a5b6eb182c26ce323412c8bd63ea5b3477bfb4d0407bb77924abd04"},
-    {file = "taskipy-1.5.1.tar.gz", hash = "sha256:aa803322e6286e4ade8156366e0f846f79959447f4a9bcd7eac59c7705bd3f0d"},
+    {file = "taskipy-1.6.0-py3-none-any.whl", hash = "sha256:33ee1d52b378cb4af3678fc459b75c3028f594c5e8e42ac0696cbe3e95d47394"},
+    {file = "taskipy-1.6.0.tar.gz", hash = "sha256:ec4d1f2208ae24218950e3a2812e4e8b4397b1f65a6ad7e2b1240b702042fa3e"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
