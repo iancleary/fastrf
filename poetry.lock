@@ -841,7 +841,7 @@ python-versions = "*"
 
 [[package]]
 name = "uvicorn"
-version = "0.13.2"
+version = "0.13.3"
 description = "The lightning-fast ASGI server."
 category = "main"
 optional = false
@@ -1419,8 +1419,8 @@ uuid = [
     {file = "uuid-1.30.tar.gz", hash = "sha256:1f87cc004ac5120466f36c5beae48b4c48cc411968eed0eaecd3da82aa96193f"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.13.2-py3-none-any.whl", hash = "sha256:6707fa7f4dbd86fd6982a2d4ecdaad2704e4514d23a1e4278104311288b04691"},
-    {file = "uvicorn-0.13.2.tar.gz", hash = "sha256:d19ca083bebd212843e01f689900e5c637a292c63bb336c7f0735a99300a5f38"},
+    {file = "uvicorn-0.13.3-py3-none-any.whl", hash = "sha256:1079c50a06f6338095b4f203e7861dbff318dde5f22f3a324fc6e94c7654164c"},
+    {file = "uvicorn-0.13.3.tar.gz", hash = "sha256:ef1e0bb5f7941c6fe324e06443ddac0331e1632a776175f87891c7bd02694355"},
 ]
 virtualenv = [
     {file = "virtualenv-20.1.0-py2.py3-none-any.whl", hash = "sha256:b0011228208944ce71052987437d3843e05690b2f23d1c7da4263fde104c97a2"},
