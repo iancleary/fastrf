@@ -1,12 +1,12 @@
 site_name: fastrf
-site_description: FastRF application, create link budgets, track compliance, fast to use, ready for use
-site_url: https://github.com/iancleary/fastrf
+site_description: FastRF application, create link budgets, track compliance across project phases, fast to use, ready for use
+site_url: https://github.com/fastrf-org/fastrf
 
 theme:
     name: 'material'
 
-repo_name: iancleary/fastrf
-repo_url: https://github.com/iancleary/fastrf
+repo_name: fastrf-org/fastrf
+repo_url: https://github.com/fastrf-org/fastrf
 edit_uri: ''
 
 nav:
