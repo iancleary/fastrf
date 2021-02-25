@@ -18,6 +18,10 @@ help:
 # adds anything that has a double # comment to the phony help list
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ".:*?## "}; {printf "\033[36m%-$(HELP_PADDING)s\033[0m %s\n", $$1, $$2}'
 
+poetry:
+poetry: ## Install poetry via pip
+	python3 -m pip install poetry
+
 python-three-six:
 python-three-six: ## setup python3.6 virtual environment using poetry (run poetry install afterwards)
 	poetry env use python3.6
@@ -36,6 +40,7 @@ python-three-eight: ## setup python3.6 virtual environment using poetry (run poe
 install: ## Install dependencies (make sure you're in a virtual environment)
 install:
 	poetry install
+	make pre-commit
 
 lint: ## lint the code
 lint:

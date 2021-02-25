@@ -12,7 +12,7 @@ class NoiseFigureCreateIn(CamelModel):
         value {float} -- Noise Figure Value, in dB
     """
 
-    value: confloat(strict=True, ge=1.0)
+    value: confloat(strict=True, ge=1.0)  # type: ignore
 
 
 class NoiseFigureBase(NoiseFigureCreateIn):

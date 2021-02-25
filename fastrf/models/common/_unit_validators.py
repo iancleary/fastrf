@@ -6,7 +6,7 @@ def dB_unit_check(unit: str) -> None:
         raise ValueError("unit: {unit}, must be dB".format(unit=unit))
 
 
-def dB_unit_check_validator():
+def dB_unit_check_validator():  # type: ignore
     return validator("unit", allow_reuse=True)(dB_unit_check)
 
 
@@ -20,7 +20,7 @@ def power_unit_check(unit: str) -> None:
         )
 
 
-def power_unit_validator():
+def power_unit_validator():  # type: ignore
     return validator("unit", allow_reuse=True)(power_unit_check)
 
 
@@ -34,7 +34,7 @@ def frequency_unit_check(unit: str) -> None:
         )
 
 
-def frequency_unit_validator():
+def frequency_unit_validator():  # type: ignore
     return validator("unit", allow_reuse=True)(frequency_unit_check)
 
 
