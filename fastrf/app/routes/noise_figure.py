@@ -44,8 +44,7 @@ def remove_noise_figure_spec(noise_figure_spec_id: str) -> bool:
 
 
 @router.put(
-    "/noise_figure/{noise_figure_id}",
-    tags=["Noise Figure"],
+    "/noise_figure/{noise_figure_id}", tags=["Noise Figure"],
 )
 def edit_single_noise_figure_spec(
     noise_figure: NoiseFigureCreateIn, noise_figure_id: str
@@ -60,8 +59,7 @@ def edit_single_noise_figure_spec(
 
 
 @router.delete(
-    "/noise_figure/{noise_figure_id}",
-    tags=["Noise Figure"],
+    "/noise_figure/{noise_figure_id}", tags=["Noise Figure"],
 )
 def remove_single_noise_figure_spec(noise_figure_id: str) -> None:
     remove_noise_figure_spec(noise_figure_id)

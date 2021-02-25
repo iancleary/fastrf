@@ -5,7 +5,7 @@ from fastrf.models.common._unit_validators import frequency_unit_validator
 
 
 class Frequency(CamelModel):
-    value: confloat(strict=True, ge=0.0) # type: ignore
+    value: confloat(strict=True, ge=0.0)  # type: ignore
     # Assuming negative frequencies are not needed
     unit: str = "Hz"  # SI Unit
 

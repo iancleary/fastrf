@@ -1,7 +1,7 @@
 # fastrf
 
 <p align="center">
-    <em>FastRF application, create link budgets, track key system metrics, fast to model, ready for production</em>
+    <em>FastRF is an application to create and track key system metrics</em>
 </p>
 
 <p align="center">

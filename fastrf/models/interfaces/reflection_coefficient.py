@@ -2,7 +2,7 @@ from fastapi_camelcase import CamelModel
 from pydantic import confloat
 
 from fastrf.models.common._unit_validators import dB_unit_check_validator
-from signals.frequency import Frequency
+from fastrf.models.signals.frequency import Frequency
 
 
 class ReflectionCoefficientBase(CamelModel):
@@ -13,7 +13,7 @@ class ReflectionCoefficientBase(CamelModel):
         unit {str}    -- decibels, dB
     """
 
-    value: confloat(strict=True, le=0.0) # type: ignore
+    value: confloat(strict=True, le=0.0)  # type: ignore
     unit: str = "dB"
 
     _unit_must_be_dB = dB_unit_check_validator()
