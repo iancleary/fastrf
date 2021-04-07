@@ -15,7 +15,7 @@ class NoiseFigureCreateIn(CamelModel):
     value: confloat(strict=True, ge=1.0)  # type: ignore
 
 
-class NoiseFigureBase(NoiseFigureCreateIn):
+class NoiseFigure(NoiseFigureCreateIn):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -28,7 +28,7 @@ class NoiseFigureBase(NoiseFigureCreateIn):
     _unit_must_be_dB = dB_unit_check_validator()
 
 
-class NoiseFigureFrequency(NoiseFigureBase):
+class NoiseFigureFrequency(NoiseFigure):
     """[Noise Figure at a single frequency]
 
     Arguments:

@@ -2,13 +2,7 @@ import pydantic
 import pytest
 from fastapi_camelcase import CamelModel
 
-from fastrf.models.gain_transfer import (
-    Gain,
-    GainBase,
-    GainTransferBase,
-    GainTransferFrequency,
-    Power,
-)
+from fastrf.models.gain_transfer import Gain, GainTransfer, GainTransferFrequency, Power
 from fastrf.models.signals.frequency import Frequency
 
 
@@ -24,7 +18,7 @@ def test_power_improper_unit():
 
 def test_gain_base():
     gain_transfer = Gain(value=60.0)
-    assert isinstance(gain_transfer, GainBase) == True
+    assert isinstance(gain_transfer, Gain) == True
 
 
 def test_gain_base_class():
@@ -42,8 +36,8 @@ def test_gain():
 def test_gain_transfer_base():
     input_power = Power(value=-50.0)
     output_power = Power(value=10.0)
-    gain_transfer = GainTransferBase(input_power=input_power, output_power=output_power)
-    assert isinstance(gain_transfer, GainTransferBase) == True
+    gain_transfer = GainTransfer(input_power=input_power, output_power=output_power)
+    assert isinstance(gain_transfer, GainTransfer) == True
 
 
 def test_gain_transfer_frequency():
@@ -59,6 +53,6 @@ def test_gain_transfer_frequency():
 def test_gain_transfer_improper_unit():
     frequency = Frequency(value=10.0)
     with pytest.raises(pydantic.error_wrappers.ValidationError):
-        gain_transfer_with_improper_value = GainTransferBase(
+        gain_transfer_with_improper_value = GainTransfer(
             f=frequency, value=2.1, unit="dBm"
         )

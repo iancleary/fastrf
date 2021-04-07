@@ -3,12 +3,12 @@ from typing import Dict, List, Union
 
 from fastapi import APIRouter
 
-from fastrf.models.noise_figure import NoiseFigureBase, NoiseFigureCreateIn
+from fastrf.models.noise_figure import NoiseFigure, NoiseFigureCreateIn
 
 router = APIRouter()
 
 
-class NoiseFigureSpec(NoiseFigureBase):
+class NoiseFigureSpec(NoiseFigure):
     id: str
 
 
