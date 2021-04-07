@@ -1,5 +1,6 @@
-from fastapi_camelcase import CamelModel
 from typing import Optional
+
+from fastapi_camelcase import CamelModel
 
 from .common._unit_validators import dB_unit_check_validator, power_unit_validator
 from .signals.frequency import Frequency
