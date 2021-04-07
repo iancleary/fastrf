@@ -1,4 +1,5 @@
 from fastapi_camelcase import CamelModel
+from typing import Optional
 
 from .common._unit_validators import dB_unit_check_validator, power_unit_validator
 from .signals.frequency import Frequency
@@ -39,6 +40,7 @@ class GainTransfer(CamelModel):
 
     input_power: Power
     output_power: Power
+    gain: Optional[float]
 
 
 class GainTransferFrequency(GainTransfer):
