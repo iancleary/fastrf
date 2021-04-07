@@ -18,6 +18,17 @@ class Gain(CamelModel):
     _unit_must_be_dB = dB_unit_check_validator()
 
 
+class GainFrequency(Gain):
+    """[Gain at a single frequency]
+
+    Arguments:
+        f {Frequency} -- Single Frequency
+        gain {Gain} -- Gain in dB
+    """
+
+    f: Frequency
+
+
 class GainTransfer(CamelModel):
     """[Input Power vs. Output Power Base Model]
 
