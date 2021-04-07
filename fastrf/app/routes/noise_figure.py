@@ -3,7 +3,7 @@ from typing import Dict, List, Union
 
 from fastapi import APIRouter
 
-from fastrf.models.noise_figure import NoiseFigure, NoiseFigureCreateIn
+from fastrf.models.noise_figure import NoiseFigure
 
 router = APIRouter()
 
@@ -28,7 +28,7 @@ def get_all_noise_figure_specs() -> List[Dict[str, Union[str, object]]]:
 
 
 @router.post("/noise_figure", tags=["Noise Figure"])
-async def create_noise_figure_spec(request: NoiseFigureCreateIn) -> None:
+async def create_noise_figure_spec(request: NoiseFigure) -> None:
     new_spec = NoiseFigureSpec(id=uuid.uuid4().hex, value=request.value)
     NOISE_FIGURE_SPECS.append(new_spec)
     return
@@ -48,7 +48,7 @@ def remove_noise_figure_spec(noise_figure_spec_id: str) -> bool:
     tags=["Noise Figure"],
 )
 def edit_single_noise_figure_spec(
-    noise_figure: NoiseFigureCreateIn, noise_figure_id: str
+    noise_figure: NoiseFigure, noise_figure_id: str
 ) -> None:
     # Delete old entry
     remove_noise_figure_spec(noise_figure_id)
