@@ -41,7 +41,7 @@ class GainTransfer(CamelModel):
 
     input_power: Power
     output_power: Power
-    gain: Optional[float]
+    gain: Optional[Gain]
 
 
 class GainTransferFrequency(GainTransfer):
