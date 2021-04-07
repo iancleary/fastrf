@@ -1,6 +1,6 @@
 site_name: fastrf
 site_description: FastRF application, create link budgets, track compliance, fast to use, ready for use
-site_url: https://github.com/iancleary/fastrf
+site_url: https://fastrf.org
 
 theme:
     name: 'material'

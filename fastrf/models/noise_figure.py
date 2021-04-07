@@ -5,17 +5,7 @@ from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigureCreateIn(CamelModel):
-    """[Noise Figure Base Model]
-
-    Arguments:
-        value {float} -- Noise Figure Value, in dB
-    """
-
-    value: confloat(strict=True, ge=1.0)  # type: ignore
-
-
-class NoiseFigureBase(NoiseFigureCreateIn):
+class NoiseFigure(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -23,12 +13,13 @@ class NoiseFigureBase(NoiseFigureCreateIn):
         unit {str}    -- decibels, dB
     """
 
+    value: confloat(strict=True, ge=1.0)  # type: ignore
     unit: str = "dB"
 
     _unit_must_be_dB = dB_unit_check_validator()
 
 
-class NoiseFigureFrequency(NoiseFigureBase):
+class NoiseFigureFrequency(NoiseFigure):
     """[Noise Figure at a single frequency]
 
     Arguments:

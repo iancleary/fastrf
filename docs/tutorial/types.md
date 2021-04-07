@@ -114,7 +114,7 @@ from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigureBase(CamelModel):
+class NoiseFigure(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -133,7 +133,7 @@ class NoiseFigureBase(CamelModel):
 ```python hl_lines="3 11"
 ...
 
-class NoiseFigureBase(CamelModel):
+class NoiseFigure(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -194,20 +194,13 @@ from .signals.frequency import Frequency
 
 ...
 
-class GainBase(CamelModel):
+class Gain(CamelModel):
     value: float
     unit: str = "dB"
 
     _unit_must_be_dB = dB_unit_check_validator()
 
-
-class Gain(GainBase):
-    input_power: Optional[Power]
-    output_power: Optional[Power]
 ```
-
-> We use the `Power` model to classify if the Gain value's operating points.
-
 -----------------------------
 
 ## Gain Transfer
@@ -226,6 +219,15 @@ class Power(CamelModel):
     unit: str = "dBm"
 
 class GainTransfer(CamelModel):
+    input_power: Power
+    output_power: Power
+    gain: Optional[Gain]
+```
+
+> We use the `Power` model to classify if the Gain value's operating points.
+
+
+class GainTransferFrequency(CamelModel):
     """[Input Power vs. Output Power at a single frequency]
 
     Arguments:
