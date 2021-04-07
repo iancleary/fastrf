@@ -114,7 +114,7 @@ from .common._unit_validators import dB_unit_check_validator
 from .signals.frequency import Frequency
 
 
-class NoiseFigureBase(CamelModel):
+class NoiseFigure(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
@@ -133,7 +133,7 @@ class NoiseFigureBase(CamelModel):
 ```python hl_lines="3 11"
 ...
 
-class NoiseFigureBase(CamelModel):
+class NoiseFigure(CamelModel):
     """[Noise Figure Base Model]
 
     Arguments:
