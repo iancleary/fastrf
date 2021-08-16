@@ -20,7 +20,7 @@ sniffio = "*"
 
 [[package]]
 name = "asgiref"
-version = "3.3.4"
+version = "3.4.1"
 description = "ASGI specs, helper code, and adapters"
 category = "main"
 optional = false
@@ -838,15 +838,15 @@ python-versions = "*"
 
 [[package]]
 name = "uvicorn"
-version = "0.14.0"
+version = "0.15.0"
 description = "The lightning-fast ASGI server."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-asgiref = ">=3.3.4"
-click = ">=7"
+asgiref = ">=3.4.0"
+click = ">=7.0"
 h11 = ">=0.8"
 typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
 
@@ -899,7 +899,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "e2b7ea395c6f658212187b2d7df4f9befa5b5411ca3db72bb7aad0dc133e7799"
+content-hash = "458005d52f4f28856b33919227789c3ec645594f6c76edf8e3e3860a64115e7f"
 
 [metadata.files]
 appdirs = [
@@ -911,8 +911,8 @@ asgi-lifespan = [
     {file = "asgi_lifespan-1.0.1-py3-none-any.whl", hash = "sha256:9ea969dc5eb5cf08e52c08dce6f61afcadd28112e72d81c972b1d8eb8691ab53"},
 ]
 asgiref = [
-    {file = "asgiref-3.3.4-py3-none-any.whl", hash = "sha256:92906c611ce6c967347bbfea733f13d6313901d54dcca88195eaeb52b2a8e8ee"},
-    {file = "asgiref-3.3.4.tar.gz", hash = "sha256:d1216dfbdfb63826470995d31caed36225dcaf34f182e0fa257a4dd9e86f1b78"},
+    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
+    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
 ]
 async-exit-stack = [
     {file = "async_exit_stack-1.0.1-py3-none-any.whl", hash = "sha256:9b43b17683b3438f428ef3bbec20689f5abbb052aa4b564c643397330adfaa99"},
@@ -1467,8 +1467,8 @@ uuid = [
     {file = "uuid-1.30.tar.gz", hash = "sha256:1f87cc004ac5120466f36c5beae48b4c48cc411968eed0eaecd3da82aa96193f"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.14.0-py3-none-any.whl", hash = "sha256:2a76bb359171a504b3d1c853409af3adbfa5cef374a4a59e5881945a97a93eae"},
-    {file = "uvicorn-0.14.0.tar.gz", hash = "sha256:45ad7dfaaa7d55cab4cd1e85e03f27e9d60bc067ddc59db52a2b0aeca8870292"},
+    {file = "uvicorn-0.15.0-py3-none-any.whl", hash = "sha256:17f898c64c71a2640514d4089da2689e5db1ce5d4086c2d53699bf99513421c1"},
+    {file = "uvicorn-0.15.0.tar.gz", hash = "sha256:d9a3c0dd1ca86728d3e235182683b4cf94cd53a867c288eaeca80ee781b2caff"},
 ]
 virtualenv = [
     {file = "virtualenv-20.4.2-py2.py3-none-any.whl", hash = "sha256:2be72df684b74df0ea47679a7df93fd0e04e72520022c57b479d8f881485dbe3"},
