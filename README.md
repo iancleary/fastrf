@@ -28,7 +28,7 @@
 
 ## The Basic Idea
 
-Fastrf is a web server that makes it easy to create radio frequency (RF) gain line ups 📡, link budgets 🌎📡🛰️, and simulation models 🧪🧮 to caputre the performance of a RF system.
+Fastrf is a web server that makes it easy to create radio frequency (RF) gain line ups 📡, link budgets 🌎📡🛰️, and simulation models 🧪🧮 to capture the performance of an RF system.
 
 This project will stand on the shoulders of some giants:
 
