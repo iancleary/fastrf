@@ -6,17 +6,17 @@
 
 <p align="center">
 
-<a href="https://github.com/iancleary/fastrf/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/iancleary/fastrf/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/icancclearynow/fastrf/actions?query=workflow%3ATest" target="_blank">
+    <img src="https://github.com/icancclearynow/fastrf/workflows/Test/badge.svg" alt="Test">
 </a>
-<a href="https://github.com/iancleary/fastrf/actions?query=workflow%3APublish" target="_blank">
-    <img src="https://github.com/iancleary/fastrf/workflows/Publish/badge.svg" alt="Publish">
+<a href="https://github.com/icancclearynow/fastrf/actions?query=workflow%3APublish" target="_blank">
+    <img src="https://github.com/icancclearynow/fastrf/workflows/Publish/badge.svg" alt="Publish">
 </a>
 <a href="https://dependabot.com/" target="_blank">
-    <img src="https://flat.badgen.net/dependabot/iancleary/fastrf?icon=dependabot" alt="Dependabot Enabled">
+    <img src="https://flat.badgen.net/dependabot/icancclearynow/fastrf?icon=dependabot" alt="Dependabot Enabled">
 </a>
 <a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
-    <img src="https://img.shields.io/codecov/c/github/iancleary/fastrf?color=%2334D058" alt="Coverage">
+    <img src="https://img.shields.io/codecov/c/github/icancclearynow/fastrf?color=%2334D058" alt="Coverage">
 </a>
 <a href="https://pypi.org/project/fastrf" target="_blank">
     <img src="https://img.shields.io/pypi/v/fastrf?color=%2334D058&label=pypi%20package" alt="Package version">
@@ -57,4 +57,4 @@ The `pyproject.toml` file is used by [poetry](https://python-poetry.org/) to ins
 
 Only **Python 3.6+** is supported as required by the black, fastapi, pydantic packages
 
-> This package was created with the [iancleary/pypackage](https://github.com/iancleary/pypackage) cookiecutter.
+> This package was created with the [icancclearynow/pypackage](https://github.com/icancclearynow/pypackage) cookiecutter.
