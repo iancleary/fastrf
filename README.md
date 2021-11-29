@@ -13,9 +13,9 @@
     <img src="https://github.com/icancclearynow/fastrf/workflows/Publish/badge.svg" alt="Publish">
 </a>
 <a href="https://dependabot.com/" target="_blank">
-    <img src="https://flat.badgen.net/dependabot/icancclearynow/fastrf?icon=dependabot" alt="Dependabot Enabled">
+    <img src="https://flat.badgen.net/github/dependabot/icancclearynow/fastrf?icon=dependabot" alt="Dependabot Enabled">
 </a>
-<a href="https://codecov.io/gh/iancleary/fastrf" target="_blank">
+<a href="https://codecov.io/gh/icancclearynow/fastrf" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/icancclearynow/fastrf?color=%2334D058" alt="Coverage">
 </a>
 <a href="https://pypi.org/project/fastrf" target="_blank">
