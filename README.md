@@ -1,4 +1,7 @@
-# fastrf
+# ARCHIVED fastrf
+
+I don't have time to continue working on this project.  Feel free to use it as a starter!
+
 
 <p align="center">
     <em>FastRF is an application to create and track key system metrics</em>
